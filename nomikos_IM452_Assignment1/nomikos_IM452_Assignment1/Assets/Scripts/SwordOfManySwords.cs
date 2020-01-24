@@ -19,7 +19,7 @@ public class SwordOfManySwords : Weapon, IAttackVisualEffects, IAttackSoundEffec
     }
     public override void DamageTarget(float damageModifier, float damageRate)
     {
-        Debug.Log("Target damaged by " + damageModifier + "at a rate of " + damageRate + " per second.");
+        Debug.Log("Target damaged by " + damageModifier + " at a rate of " + damageRate + " per second.");
     }
 
     public void InstantiateHitParticles()

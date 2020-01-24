@@ -22,6 +22,7 @@ abstract public class Weapon
 
     public float GetDamage()
     {
+        Debug.Log(name + " damage = " + damage);
         return damage;
     }
 
@@ -32,6 +33,7 @@ abstract public class Weapon
 
     public float GetDamageRate()
     {
+        Debug.Log(name + " Rate Of Damage = " + rateOfDamage);
         return rateOfDamage;
     }
 
