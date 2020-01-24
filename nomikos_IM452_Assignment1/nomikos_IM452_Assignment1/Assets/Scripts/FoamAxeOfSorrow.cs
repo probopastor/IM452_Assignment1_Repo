@@ -29,18 +29,26 @@ public class FoamAxeOfSorrow : Weapon, IAttackVisualEffects, IAttackSoundEffects
         Debug.Log("Beautiful particles were just created due to the miserable Foam Axe of Sorrow. Where? In your imagination. What type of particles? Literal tears. Tear shaped particles. It's sad. Your axe is sad. ): ");
     }
 
-    public bool IsWeeping(float weepTime)
+    public bool IsWeeping()
     {
         if(weepTime > 0)
         {
-            Debug.Log("Axe is weeping: True");
+            canAttack = false;
+            Debug.Log("Axe is weeping, " + canAttack + ". ");
             return true;
         }
         else
         {
-            Debug.Log("Axe is weeping: False");
+            canAttack = true;
+            Debug.Log("Axe is not weeping, " + canAttack + ". ");
             return false;
         }
+    }
+
+    public void SetWeepTime(float newWeepTime)
+    {
+        Debug.Log("Weep time set to " + newWeepTime + ". ");
+        weepTime = newWeepTime;
     }
 
     public void ScreenShake()

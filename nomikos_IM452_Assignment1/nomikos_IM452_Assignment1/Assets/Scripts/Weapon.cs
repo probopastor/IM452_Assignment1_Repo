@@ -12,11 +12,13 @@ abstract public class Weapon
 
     public string GetName()
     {
+        Debug.Log("Weapon name is " + name + ". ");
         return name;
     }
 
     public void SetName(string newName)
     {
+        Debug.Log("Weapon name set to " + newName + ". ");
         name = newName;
     }
 
@@ -28,6 +30,7 @@ abstract public class Weapon
 
     public void SetDamage(float newDamage)
     {
+        Debug.Log("Damage on " + name + " set to " + newDamage + ". ");
         damage = newDamage;
     }
 
@@ -39,6 +42,7 @@ abstract public class Weapon
 
     public void SetDamageRate(float newDamageRate)
     {
+        Debug.Log("Damage rate on " + name + " set to " + newDamageRate + ". ");
         rateOfDamage = newDamageRate;
     }
 

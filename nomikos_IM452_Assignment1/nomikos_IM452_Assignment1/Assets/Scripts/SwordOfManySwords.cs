@@ -34,6 +34,7 @@ public class SwordOfManySwords : Weapon, IAttackVisualEffects, IAttackSoundEffec
 
     public void SetSwordMultiplicationAmount(int newMultiplicationAmount)
     {
+        Debug.Log("Sword of Many Swords multiplication amount set to " + newMultiplicationAmount + ". ");
         swordMultiplicationAmount = newMultiplicationAmount;
     }
 
