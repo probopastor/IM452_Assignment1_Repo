@@ -67,17 +67,22 @@ public class WeaponManager : MonoBehaviour
         FoamAxeOfSorrow firstAxePart2 = new FoamAxeOfSorrow();
         FoamAxeOfSorrow secondAxePart2 = new FoamAxeOfSorrow();
 
+        BlunderfulMace firstMacePart2 = new BlunderfulMace();
+
+
         //Add weapons to Weapon list
         weaponsList.Add(firstSwordPart2);
         weaponsList.Add(secondSwordPart2);
         weaponsList.Add(firstAxePart2);
         weaponsList.Add(secondAxePart2);
+        weaponsList.Add(firstMacePart2);
 
         //Add weapons to Visual Effects List
         visualEffectsList.Add(firstSwordPart2);
         visualEffectsList.Add(secondSwordPart2);
         visualEffectsList.Add(firstAxePart2);
         visualEffectsList.Add(secondAxePart2);
+        visualEffectsList.Add(firstMacePart2);
     }
 
     // Update is called once per frame
