@@ -12,7 +12,7 @@ using UnityEngine;
 public interface IAttackVisualEffects
 {
     void InstantiateHitParticles();
-    void ScreenShake();
+    void ShakeScreen();
 }
 
 

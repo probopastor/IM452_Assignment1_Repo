@@ -38,7 +38,7 @@ public class WeaponManager : MonoBehaviour
 
         firstSword.InstantiateHitParticles();
         firstSword.CreateSound();
-        firstSword.ScreenShake();
+        firstSword.ShakeScreen();
 
         firstSword.DamageTarget(2, 2);
 
@@ -62,7 +62,7 @@ public class WeaponManager : MonoBehaviour
 
         firstAxe.InstantiateHitParticles();
         firstAxe.CreateSound();
-        firstAxe.ScreenShake();
+        firstAxe.ShakeScreen();
 
         firstAxe.DamageTarget(2, 2);
 

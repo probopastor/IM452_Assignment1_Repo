@@ -27,7 +27,7 @@ public class SwordOfManySwords : Weapon, IAttackVisualEffects, IAttackSoundEffec
         Debug.Log("Beautiful particles were just created due to the epic Sword of Many Swords. Where? In your imagination. ");
     }
 
-    public void ScreenShake()
+    public void ShakeScreen()
     {
         Debug.Log("Oh no the screen is shaking due to the Sword of Many Swords oh no. ");
     }

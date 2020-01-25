@@ -26,7 +26,7 @@ public class BlunderfulMace : Weapon, IAttackSoundEffects, IAttackVisualEffects
         Debug.Log("Ugly particles were created when the Blunderful Mace struck its target. You feel bad about this for some reason. ");
     }
 
-    public void ScreenShake()
+    public void ShakeScreen()
     {
         Debug.Log("Oh no the screen is shaking due to the Blunderful Mace. This also shakes the game's world, resulting in two buildings collapsing. " +
             "There were two casualties.");

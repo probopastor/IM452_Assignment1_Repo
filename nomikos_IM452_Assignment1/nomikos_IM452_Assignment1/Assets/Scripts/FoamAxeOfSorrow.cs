@@ -51,7 +51,7 @@ public class FoamAxeOfSorrow : Weapon, IAttackVisualEffects, IAttackSoundEffects
         weepTime = newWeepTime;
     }
 
-    public void ScreenShake()
+    public void ShakeScreen()
     {
         Debug.Log("Oh no the screen is shaking due to the Foam Axe of Sorrow. oh no. ");
     }
