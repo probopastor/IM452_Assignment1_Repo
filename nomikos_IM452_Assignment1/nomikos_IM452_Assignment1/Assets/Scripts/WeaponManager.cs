@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
+    public List<Weapon> weaponsList = new List<Weapon>();
+
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Testing sword and axe object functionality: ");
+
+        Debug.Log("----------------------------------------------");
+
         //Test of all functions of Sword of Many Swords item.
         SwordOfManySwords firstSword = new SwordOfManySwords();
         firstSword.SetName("swordy");
@@ -50,11 +56,31 @@ public class WeaponManager : MonoBehaviour
 
         firstAxe.DamageTarget(2, 2);
 
+        Debug.Log("----------------------------------------------");
+
+        SwordOfManySwords firstSwordPart2 = new SwordOfManySwords();
+        SwordOfManySwords secondSwordPart2 = new SwordOfManySwords();
+
+        FoamAxeOfSorrow firstAxePart2 = new FoamAxeOfSorrow();
+        FoamAxeOfSorrow secondAxePart2 = new FoamAxeOfSorrow();
+
+        weaponsList.Add(firstSwordPart2);
+        weaponsList.Add(secondSwordPart2);
+        weaponsList.Add(firstAxePart2);
+        weaponsList.Add(secondAxePart2);
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            foreach(Weapon weapon in weaponsList)
+            {
+                weapon.DamageTarget(1f, 2f);
+            }
+        }
     }
 }
