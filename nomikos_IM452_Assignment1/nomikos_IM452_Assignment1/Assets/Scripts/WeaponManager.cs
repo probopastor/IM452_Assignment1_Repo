@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     public List<Weapon> weaponsList = new List<Weapon>();
+    public List<IAttackVisualEffects> visualEffectsList = new List<IAttackVisualEffects>();
 
     // Start is called before the first frame update
     void Start()
@@ -58,18 +59,25 @@ public class WeaponManager : MonoBehaviour
 
         Debug.Log("----------------------------------------------");
 
+        //Creates 2 Sword of Many Sword objects.
         SwordOfManySwords firstSwordPart2 = new SwordOfManySwords();
         SwordOfManySwords secondSwordPart2 = new SwordOfManySwords();
 
+        //Creates 2 Foam Axe of Sorrow objects.
         FoamAxeOfSorrow firstAxePart2 = new FoamAxeOfSorrow();
         FoamAxeOfSorrow secondAxePart2 = new FoamAxeOfSorrow();
 
+        //Add weapons to Weapon list
         weaponsList.Add(firstSwordPart2);
         weaponsList.Add(secondSwordPart2);
         weaponsList.Add(firstAxePart2);
         weaponsList.Add(secondAxePart2);
 
-
+        //Add weapons to Visual Effects List
+        visualEffectsList.Add(firstSwordPart2);
+        visualEffectsList.Add(secondSwordPart2);
+        visualEffectsList.Add(firstAxePart2);
+        visualEffectsList.Add(secondAxePart2);
     }
 
     // Update is called once per frame
@@ -80,6 +88,14 @@ public class WeaponManager : MonoBehaviour
             foreach(Weapon weapon in weaponsList)
             {
                 weapon.DamageTarget(1f, 2f);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            foreach (IAttackVisualEffects weaponEffect in visualEffectsList)
+            {
+                weaponEffect.InstantiateHitParticles();
             }
         }
     }
