@@ -1,4 +1,13 @@
-﻿using System.Collections;
+﻿/*
+* William Nomikos
+* WeaponManager.cs
+* Assignment #1
+* Script instantiates weapon types as objects to perform various tasks. In start, runs through all functions
+* on a SwordOfManySwords and FoamAxeOfSorrow weapon types as a test. In addition, runs through damage and particle
+* functions on all weapons in weaponsList and visualEffectsList upon pressing 1 or 2 respectively.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -88,6 +97,7 @@ public class WeaponManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //If 1 key is pushed, have each weapon in weaponList damage the target.
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             foreach(Weapon weapon in weaponsList)
@@ -96,6 +106,7 @@ public class WeaponManager : MonoBehaviour
             }
         }
 
+        //If 2 key is pushed, have each weapon in weaponEffect "instantiate" their hit particles.
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             foreach (IAttackVisualEffects weaponEffect in visualEffectsList)

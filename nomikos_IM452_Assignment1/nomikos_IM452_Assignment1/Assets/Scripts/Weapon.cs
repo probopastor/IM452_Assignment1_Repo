@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* William Nomikos
+* Weapon.cs
+* Assignment #1
+* Abstract weapon class is superclass for all weapon types to inherit from. Includes getter and setter functions
+* for each weapon's name, damage, and rate of damage.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+* William Nomikos
+* BlunderfulMace.cs
+* Assignment #1
+* Script handles behavior for the BlunderfulMace item, including its sound effects, its visual effects, and its damage output.
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
